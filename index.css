@@ -13,12 +13,33 @@
             from { opacity: 0; }
             to { opacity: 1; }
         }
-        header {
-            width: 100%;
-            padding: 20px 0;
-            text-align: center;
-            position: relative;
-        }
+        .header-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+}
+
+.header-titles {
+    display: flex;
+    flex-direction: column;
+}
+
+header nav a {
+    margin: 0 10px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
 
         h1 {   
             margin: 0;
@@ -34,18 +55,7 @@
             from { transform: translateY(-20px); opacity: 0; }
             to { transform: translateY(0); opacity: 1; }
         }
-        nav {
-            margin: 20px 0;
-            color: green;   
-        }
-
-        nav a {
-            margin: 0 15px;
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            color: green;      
-        }
+       
         section {
             width: 90%;
             max-width: 800px;
@@ -221,6 +231,7 @@ input:invalid, textarea:invalid{
 }
 
     
+
 
 
 
