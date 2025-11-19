@@ -31,6 +31,7 @@
 }
 
 header nav a {
+    display:fixed;   
     margin: 0 10px;
     color: white;
     font-weight: bold;
@@ -171,6 +172,7 @@ header nav a:hover {
 .btn-secondary:hover {
     background-color: #bbb;
 }
+
 
 
 
