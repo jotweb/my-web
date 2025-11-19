@@ -21,7 +21,6 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            color: white;
             width: 100%;
             padding: 20px 0;
             text-align: center;
@@ -29,11 +28,13 @@
         }
 
         h1 {
+            color: green;   
             margin: 0;
             font-size: 2.5em;
             animation: slideIn 1s ease-in-out;
         }
         h3 {
+            color: green;   
             margin: 0;
             font-size: 2.5em;
             animation: slideIn 1s ease-in-out;
@@ -44,7 +45,7 @@
         }
         nav {
             margin: 20px 0;
-            color: #2caf50;   
+            color: green;   
         }
 
         nav a {
@@ -52,6 +53,7 @@
             color: white;
             text-decoration: none;
             font-weight: bold;
+            color: green;      
         }
         section {
             width: 90%;
@@ -228,5 +230,6 @@ input:invalid, textarea:invalid{
 }
 
     
+
 
 
