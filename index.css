@@ -78,20 +78,6 @@ header nav a:hover {
             width: 100%;
             text-align: center;
         }
-
-        .button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
-
-        .button:hover {
-            background-color: #45a049;
         }
 /* Contact Page Layout */
 .contact-page {
@@ -183,6 +169,7 @@ header nav a:hover {
 .btn-secondary:hover {
     background-color: #bbb;
 }
+
 
 
 
