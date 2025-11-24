@@ -1,4 +1,7 @@
-/* GLOBAL */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -327,3 +330,4 @@ footer {
         margin: 0 10px;
     }
 }
+
