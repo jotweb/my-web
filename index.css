@@ -1,7 +1,7 @@
        body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
-            padding: 0;
+            padding-top: 80px;
             background-color: #f4f4f4;
             color: #333;
             display: flex;
@@ -13,38 +13,45 @@
             from { opacity: 0; }
             to { opacity: 1; }
         }
-        .header-content {
-    position: relative;
-    z-index: 2;
+       
+header {
+    width: 100%;
+    padding: 15px 40px;
+    background: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding:20px;
-    flex-wrap:wrap;           
-    width: 90%;
-    margin: auto;
-    color: white;
-    text-shadow: 2px 2px 5px black;
+    position: fixed; /* stays at top */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-.header-titles {
-    display: flex;
-    flex-direction: column;
+header .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #222;
+    margin: 0;
 }
-header .text{
-       max-width:100%;
-}
+
 header nav a {
-    display:fixed;   
-    margin: 0 10px;
-    color: white;
-    font-weight: bold;
+    margin-left: 25px;
     text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    font-weight: 500;
 }
 
 header nav a:hover {
-    color:green;
+    color: #0077ff;
 }
+
+
+header .text{
+       max-width:100%;
+}
+
  #skills ul li{
       list-style:none;
  }
@@ -225,6 +232,7 @@ header nav a:hover {
     header h3 { font-size: 1rem; }
     nav a { font-size: 0.9rem; }
 }
+
 
 
 
