@@ -33,7 +33,8 @@ body {
 nav {
     display: flex;
     gap: 25px;
-    margin:5px;
+    margin:20px;
+    right:10px;
 }
 
 nav a {
@@ -388,6 +389,7 @@ footer {
         margin: 0 10px;
     }
 }
+
 
 
 
