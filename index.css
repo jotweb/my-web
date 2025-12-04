@@ -174,20 +174,40 @@ section h2 {
     background: #43a047;
 }
 
-
 /* FOOTER */
-footer {
-    text-align: center;
-    padding: clamp(15px, 4vw, 25px);
+.footer {
+    width: 100%;
+    padding: clamp(1rem, 3vw, 2rem);
     background: #111;
-    color: white;
-    margin-top: 40px;
+    text-align: center;
+    color: #ccc;
+    margin-top: clamp(2rem, 5vw, 4rem);
 }
 
- .social-links a {
-        font-size: 1.3rem;
-        margin: 0 10px;
- }
+.footer-text {
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
+    margin-bottom: clamp(1rem, 2vw, 1.5rem);
+}
+
+/* ICONS */
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: clamp(1rem, 3vw, 2rem);
+}
+
+.footer-icons a {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    color: #ccc;
+    transition: 0.3s ease;
+}
+
+.footer-icons a:hover {
+    color: white;
+    transform: scale(1.1);
+}
+
+
 
 
 
