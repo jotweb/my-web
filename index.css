@@ -1,398 +1,130 @@
-html {
-    scroll-behavior: smooth;
-}
-
+/* PAGE BASE */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
-    padding-top: 80px;
-    background: #f4f4f4;
+    padding-top: clamp(60px, 6vw, 100px);
+    background-color: #f4f4f4;
     color: #333;
 }
 
-/* ============ HEADER ============ */
-.main-header {
+/* HEADER */
+header {
     width: 100%;
-    padding: 15px 40px;
+    padding: clamp(10px, 3vw, 25px) clamp(20px, 5vw, 60px);
     background: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: fixed;
     top: 0;
-    left: 0;
     z-index: 1000;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 .logo {
-    font-size: 1.6rem;
-    font-weight: bold;
+    font-size: clamp(1.2rem, 4vw, 2rem);
+    font-weight: 700;
 }
 
+/* NAVIGATION */
 nav {
     display: flex;
-    gap: 25px;
-    margin:20px;
-    right:10px;
+    gap: clamp(10px, 3vw, 35px);
 }
 
 nav a {
     text-decoration: none;
-    color: #333;
-    font-size: 1rem;
+    color: #222;
+    font-size: clamp(0.9rem, 2.2vw, 1.1rem);
+    font-weight: 500;
 }
 
-.nav a:hover {
-    color: #0077ff;
+nav a:hover {
+    color: #0078ff;
 }
 
+/* MOBILE MENU BUTTON */
 .menu-btn {
     display: none;
-    font-size: 1.8rem;
+    font-size: clamp(1.5rem, 5vw, 2.4rem);
     cursor: pointer;
 }
 
-/* ============ HERO ============ */
+/* HERO SECTION */
 #hero {
     width: 100%;
-    height: 350px;
+    padding: clamp(80px, 20vw, 220px) 20px;
     text-align: center;
     color: white;
-    padding-top: 80px;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-     align-items: center;
-}
-
-#hero .hero-overlay {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0,0,0,0.4);
+    background-size: cover;
+    background-position: center;
+    background-image: url('image1.jpg');
 }
 
 #hero h2 {
-    font-size: 2.5rem;
+    font-size: clamp(1.8rem, 6vw, 3rem);
     margin: 0;
-    position: relative;
 }
 
 #hero p {
-    position: relative;
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 3.5vw, 1.4rem);
     margin-top: 10px;
 }
-.hero-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    transition: opacity 1s ease-in-out;
-    z-index: 1;
-    opacity: 0;
-}
 
-/* Show first image initially */
-.hero-bg.active {
-    opacity: 1;
-}
-
-.hero-title, .hero-subtitle {
-    position: relative;
-    z-index: 2;
-    margin: 0;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
-}
-
-.hero-title {
-    font-size: 2.5rem;
-    animation: slideDown 1.3s ease forwards;
-}
-
-.hero-subtitle {
-    font-size: 1.3rem;
-    animation: slideUp 1.3s ease forwards 0.4s;
-}
-
-/* ============ SECTIONS ============ */
+/* SECTIONS */
 section {
-    max-width: 800px;
-    margin: 20px auto;
+    max-width: min(800px, 90%);
+    margin: clamp(15px, 4vw, 40px) auto;
+    padding: clamp(15px, 4vw, 30px);
     background: white;
-    padding: 25px;
-    border-radius: 8px;
+    border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-/* SKILLS */
-#skills ul {
-    list-style: none;
-    padding: 0;
+section h2 {
+    font-size: clamp(1.4rem, 5vw, 2.2rem);
 }
 
-#skills li {
-    margin: 10px 0;
+/* SKILLS LIST */
+#skills ul li {
+    list-style: none;
+    padding: 8px 0;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
 }
 
 /* CONTACT FORM */
-.contact-form {
-    width: 100%;
+.contact-section {
+    width: min(800px, 90%);
+    margin: auto;
+    padding: clamp(20px, 5vw, 40px);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
+/* GRID WITHOUT MEDIA QUERIES */
 .form-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+    gap: clamp(15px, 4vw, 25px);
 }
 
-.form-row.full {
-    grid-column: span 2;
+.form-row label {
+    font-size: clamp(1rem, 2.5vw, 1.1rem);
 }
 
-.form-row input,
-.form-row textarea {
-    width: 100%;
-    padding: 10px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-}
-
-.form-actions {
-    grid-column: span 2;
-    text-align: center;
-}
-
+/* BUTTONS */
 .btn {
-    padding: 12px 20px;
-    border: none;
-    border-radius: 5px;
-}
-
-.btn-primary {
-    background: #4CAF50;
-    color: white;
-}
-
-.btn-secondary {
-    background: #ccc;
+    padding: clamp(10px, 2.5vw, 15px) clamp(15px, 5vw, 30px);
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    border-radius: 6px;
+    cursor: pointer;
 }
 
 /* FOOTER */
 footer {
     text-align: center;
-    padding: 12px;
-    background: #4CAF50;
+    padding: clamp(15px, 4vw, 25px);
+    background: #111;
     color: white;
-}
-
-/* ============ RESPONSIVE ============ */
-@media (max-width: 768px) {
-
-    .nav {
-        display: none;
-        flex-direction: column;
-        gap:15px;
-        background: white;
-        padding: 15px 25px;
-        position: absolute;
-        top: 70px;
-        right: 20px;
-        box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-        border-radius: 8px;
-        z-index:2000;
-    }
-
-    .nav.active {
-        display: flex;
-    }
-
-    .menu-btn {
-        display: block;
-        font-size:1.8rem;
-        cursor: pointer;
-    }
-     .nav a {
-        font-size: 1rem;
-        text-align: left;
-        width: 100%;
-        padding: 10px 0;
-        border-bottom: 1px solid #eee;
-     }
-    
-    nav a:last-child {
-        border-bottom: none;
-    }
-
-    #hero h2 { font-size: 2rem; }
-    #hero p { font-size: 1rem; }
-
-    .form-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .form-row.full {
-        grid-column: span 1;
-    }
-
-    section {
-        margin: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    .logo {
-        font-size: 1.2rem;
-    }
-    
- .menu-btn {
-        display: fixed;
-        color:#000000;
-     margin:15px;
-    }
-    #hero h2 {
-        font-size: 1.8rem;
-    }
-}
-/* ANIMATIONS */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeIn 1s ease-out forwards;
-}
-
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Hero text animation */
-.hero-title {
-    opacity: 0;
-    animation: slideDown 1.3s ease forwards;
-}
-
-.hero-subtitle {
-    opacity: 0;
-    animation: slideUp 1.3s ease forwards 0.4s;
-}
-
-@keyframes slideDown {
-    from {
-        opacity: 0;
-        transform: translateY(-40px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes slideUp {
-    from {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Smooth hover animations */
-.nav a {
-    transition: 0.3s ease;
-}
-.nav a:hover {
-    color: #0077ff;
-    transform: translateY(-2px);
-}
-
-/* Button hover effects */
-.btn {
-    transition: 0.3s ease;
-}
-.btn:hover {
-    opacity: 0.85;
-    transform: translateY(-3px);
-}
-.fade-in {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: 1s ease;
-}
-
-.fade-in.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-/* ========= Footer Section ========= */
-.footer {
-    background: #0d0d0d;
-    color: #fff;
-    padding: 50px 20px;
-    text-align: center;
     margin-top: 40px;
 }
-
-.footer-logo {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-    letter-spacing: 1px;
-}
-
-.footer-text {
-    font-size: 1rem;
-    color: #ccc;
-    margin-bottom: 25px;
-}
-
-.social-links {
-    margin-bottom: 25px;
-}
-
-.social-links a {
-    text-decoration: none;
-    color: #fff;
-    margin: 0 12px;
-    font-size: 1.5rem;
-    transition: 0.3s ease;
-}
-
-.social-links a:hover {
-    color: #4CAF50;
-    transform: translateY(-5px);
-}
-
-.footer-copy {
-    font-size: 0.9rem;
-    color: #aaa;
-    margin-top: 20px;
-}
-
-/* Responsive Footer */
-@media (max-width: 600px) {
-    .footer-logo {
-        font-size: 1.6rem;
-    }
-    .social-links a {
-        font-size: 1.3rem;
-        margin: 0 10px;
-    }
-}
-
-
-
-
-
-
-
