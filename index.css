@@ -74,7 +74,7 @@ nav a:hover {
     font-size: clamp(1rem, 3.5vw, 1.4rem);
     margin-top: 10px;
 }
-.hero-bg {
+.hero {
     width: 100%;
     height: clamp(280px, 55vh, 500px);
     background-image: url("image1.jpg");
@@ -164,6 +164,7 @@ footer {
         font-size: 1.3rem;
         margin: 0 10px;
  }
+
 
 
 
