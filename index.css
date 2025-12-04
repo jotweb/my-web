@@ -44,7 +44,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #0078ff;
+    color: #2caf50;
 }
 
 /* MOBILE MENU BUTTON */
@@ -270,10 +270,11 @@ section h2 {
     font-size: 1.5rem;
     transition: 0.3s ease;
 }
-.social-links a {
-    color: green;
+.social-links a:hover {
+    color: #2caf50;
     transform: scale(1.1);
 }
+
 
 
 
