@@ -259,7 +259,7 @@ section h2 {
 }
 
 .footer-icons a:hover {
-    color: white;
+    color: green;
     transform: scale(1.1);
 }
 
@@ -270,6 +270,7 @@ section h2 {
     font-size: 1.5rem;
     transition: 0.3s ease;
 }
+
 
 
 
