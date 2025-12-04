@@ -74,10 +74,10 @@ nav a:hover {
     font-size: clamp(1rem, 3.5vw, 1.4rem);
     margin-top: 10px;
 }
-.hero {
+.hero-bg {
     width: 100%;
     height: clamp(280px, 55vh, 500px);
-    background-image: url("your-image.jpg");
+    background-image: url("image1.jpg");
     background-size: cover;          /* Makes it fill all screens */
     background-position: center;      /* Keeps the main part visible */
     background-repeat: no-repeat;
@@ -164,6 +164,7 @@ footer {
         font-size: 1.3rem;
         margin: 0 10px;
  }
+
 
 
 
