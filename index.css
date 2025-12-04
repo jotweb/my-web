@@ -74,18 +74,15 @@ nav a:hover {
     font-size: clamp(1rem, 3.5vw, 1.4rem);
     margin-top: 10px;
 }
-
-.hero-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
+.hero {
     width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    transition: opacity 1s ease-in-out;
-    z-index: 1;
-    opacity: 0;
+    height: clamp(280px, 55vh, 500px);
+    background-image: url("your-image.jpg");
+    background-size: cover;          /* Makes it fill all screens */
+    background-position: center;      /* Keeps the main part visible */
+    background-repeat: no-repeat;
+    border-radius: clamp(0px, 1vw, 15px);
+    padding: clamp(1rem, 3vw, 4rem);
 }
 
 /* Show first image initially */
@@ -167,5 +164,6 @@ footer {
         font-size: 1.3rem;
         margin: 0 10px;
  }
+
 
 
