@@ -6,6 +6,9 @@ body {
     background-color: #f4f4f4;
     color: #333;
 }
+#jot{
+    margin-top:15px;
+}
 
 /* HEADER */
 header {
@@ -128,3 +131,4 @@ footer {
     color: white;
     margin-top: 40px;
 }
+
