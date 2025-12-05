@@ -22,6 +22,37 @@
 <header class="main-header">
     <h1 class="logo">JothamWeb</h1>
 
+<!-- Mobile Menu Button (Hamburger) -->
+                <div class="-mr-2 -my-2 md:hidden">
+                    <button id="mobile-menu-btn" type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-500 hover:text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <!-- Icon for menu open -->
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+
+ <!-- Mobile Menu Panel (Hidden by default) -->
+        <div id="mobile-menu" class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden hidden">
+            <div class="rounded-lg shadow-2xl ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
+                <div class="pt-5 pb-6 px-5">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <span class="text-xl font-bold text-indigo-600">MENU</span>
+                        </div>
+                        <div class="-mr-2">
+                            <button id="mobile-menu-close-btn" type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-500 hover:text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                                <span class="sr-only">Close menu</span>
+                                <!-- Icon for menu close (X) -->
+                                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+             
+    
     <nav class="nav">
         <a href="#about"><i class="fa-solid fa-user"></i> About</a>
         <a href="#skills"><i class="fa-solid fa-tools"></i> Skills</a>
@@ -171,6 +202,31 @@ setInterval(() => {
     heroBg.classList.add('active');
 }, 4000);
 
+ // JavaScript for mobile menu toggle
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            const menuCloseBtn = document.getElementById('mobile-menu-close-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navLinks = document.querySelectorAll('.mobile-nav-link');
+
+            // Toggle menu visibility
+            const toggleMenu = () => {
+                mobileMenu.classList.toggle('hidden');
+            };
+
+            menuBtn.addEventListener('click', toggleMenu);
+            menuCloseBtn.addEventListener('click', toggleMenu);
+
+            // Close menu when a navigation link is clicked (important for mobile UX)
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
+            });
+        });
+    
 </script>
 
 </body>
