@@ -113,7 +113,13 @@ nav a:hover {
     font-size: clamp(1rem, 4vw, 1.6rem);
     margin-top: 10px;
 }
-
+#hero p a{
+    text-decoration: none; 
+    color:#fff;
+}
+#hero p a:hover{
+    color:#2caf50;
+}
 
 /* SECTIONS */
 section {
@@ -274,6 +280,7 @@ section h2 {
     color: #2caf50;
     transform: scale(1.1);
 }
+
 
 
 
