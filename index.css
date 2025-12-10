@@ -52,6 +52,7 @@ nav ul li a {
     padding: 0.5rem 1rem;
     display: block;
     transition: background-color 0.3s;
+    margin:8px;
 }
 
 nav ul li a:hover {
@@ -314,6 +315,7 @@ footer {
 .btn:hover {
   background: #79b8ff;
 }
+
 
 
 
