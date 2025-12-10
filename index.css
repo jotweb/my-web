@@ -278,26 +278,6 @@ footer {
   height: auto;
   display: block;
 }
-
-.project-content {
-  padding: 1.2rem;
-}
-
-.project-content h3 {
-  margin: 0 0 0.5rem;
-}
-
-.project-content p {
-  font-size: 0.95rem;
-  opacity: 0.9;
-}
-
-.tech {
-  margin: 0.8rem 0;
-  font-size: 0.85rem;
-  opacity: 0.8;
-}
-
 /* Button at bottom */
 .btn {
   display: block;
@@ -315,3 +295,4 @@ footer {
 .btn:hover {
   background: #79b8ff;
 }
+
