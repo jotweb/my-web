@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <meta name="google-site-verification" content="ANyGRzb0O0jW7OLS2He2J8rJjeG15jdYYCqIUDA6C80" />
 <link rel="icon" type="image/png" href="image5.png">
-
+ <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+          rel="stylesheet">
 </head>
 <body>
 
@@ -20,10 +21,10 @@
     
     <nav id="main-nav">
         <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+        <a href="#about"><i class="fa-solid fa-user"></i> About</a>
+        <a href="#skills"><i class="fa-solid fa-tools"></i> Skills</a>
+        <a href="#projects"><i class="fa-solid fa-folder"></i> Projects</a>
+        <a href="#contact"><i class="fa-solid fa-message"></i> Contact</a>
         </ul>
     </nav>    </header>
 
@@ -35,12 +36,12 @@
     </section>
 
     <section id="about" class="content-section">
-        <h2>About Me</h2>
+       <i class="fa-solid fa-user"></i> <h2>About Me</h2>
         <p>Hi 👋 I’m Ankunda Jotham, a creative web developer who enjoys turning ideas into functional and visually appealing websites. I love building layouts that are responsive, simple, and easy to use.</p>
     </section>
 
     <section id="skills" class="content-section">
-        <h2>My Skills</h2>
+        <i class="fa-solid fa-tools"></i><h2>My Skills</h2>
          <ul>
         <li><i class="fa-brands fa-html5"></i> HTML & CSS</li>
         <li><i class="fa-brands fa-js"></i> JavaScript</li>
@@ -50,6 +51,8 @@
     </ul>   
  </section>
 
+    <section id="projects">
+    <i class="fa-solid fa-folder"></i><h2>My Projects</h2>
 <div class="project-card">
     <img src="putinpasha.png" alt="Putin Pasha Website Preview">
 
@@ -78,7 +81,7 @@
 
     
     <section id="contact" class="content-section contact-form-container">
-        <h2>Get in Touch</h2>
+       <i class="fa-solid fa-message"></i> <h2>Get in Touch</h2>
         <form id="contact-form" action="https://formspree.io/f/movyvkel" method="POST">
             <div class="form-group">
                 <label for="name">Name</label>
