@@ -3,111 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jotham Portfolio</title>
-    <meta name="google-site-verification" content="ANyGRzb0O0jW7OLS2He2J8rJjeG15jdYYCqIUDA6C80" />
-
+    <title>Jothamweb Portfolio</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<meta name="google-site-verification" content="ANyGRzb0O0jW7OLS2He2J8rJjeG15jdYYCqIUDA6C80" />
+<link rel="icon" type="image/png" href="image5.png">
 
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-    <link rel="icon" type="image/png" href="image5.png">
-
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-          rel="stylesheet">
 </head>
-<div id="jot"></div>
 <body>
-<!-- HEADER -->
-<header class="main-header">
-    <h1 class="logo">JothamWeb</h1>       
+
+    <header>
+        <div class="logo">JothamWeb</div>
+        <button class="menu-toggle" aria-label="Toggle navigation" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+    </button>
     
-    <nav class="nav">
-        <a href="#about"><i class="fa-solid fa-user"></i> About</a>
-        <a href="#skills"><i class="fa-solid fa-tools"></i> Skills</a>
-        <a href="#projects"><i class="fa-solid fa-folder"></i> Projects</a>
-        <a href="#contact"><i class="fa-solid fa-message"></i> Contact</a>
-    </nav>
+    <nav id="main-nav">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>    </header>
 
-    <div class="menu-btn" onclick="toggleMenu()">
-        <i class="fa fa-bars"></i>
-    </div>
-</header>
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to my portfolio</h1>
+            <p>I am a **skilled frontend developer** passionate about building beautiful and functional user interfaces.</p>
+        </div>
+    </section>
 
-<!-- HERO SECTION -->
-<section id="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-bg" id="hero-bg"></div>
-    <h2 class="hero-title">Welcome to my Portfolio</h2>
-    <p class="hero-subtitle">I am a skilled Frontend Developer</p>
-    <p>You can also <a href="#contact">Book your Website here</a></p>
-</section>
+    <section id="about" class="content-section">
+        <h2>About Me</h2>
+        <p>Hi 👋 I’m Ankunda Jotham, a creative web developer who enjoys turning ideas into functional and visually appealing websites. I love building layouts that are responsive, simple, and easy to use.</p>
+    </section>
 
-<!-- ABOUT -->
-<section id="about">
-    <h2>About Me</h2>
-    <p>I am a passionate web developer skilled in HTML, CSS, JavaScript, and more.</p>
-</section>
-
-<!-- SKILLS -->
-<section id="skills">
-    <h2>Skills</h2>
-    <ul>
+    <section id="skills" class="content-section">
+        <h2>My Skills</h2>
+         <ul>
         <li><i class="fa-brands fa-html5"></i> HTML & CSS</li>
         <li><i class="fa-brands fa-js"></i> JavaScript</li>
         <li><i class="fa-brands fa-react"></i> React</li>
         <li><i class="fa-brands fa-node"></i> Node.js</li>
         <li><i class="fa-solid fa-mobile"></i> Responsive Design</li>
-    </ul>
-</section>
+    </ul>   
+ </section>
 
-<!-- PROJECTS -->
 <section id="projects">
-    <h2>Projects</h2>
-    <p>Project 1: Description</p>
-    <p>Project 2: Description</p>
-    <p>Project 3: Description</p>
+  <h2>Projects</h2>
+
+  <div class="project-card">
+    <img src="putinpasha.png" alt="Putin Pasha Website Preview">
+
+    <div class="project-content">
+      <h3>Putin Pasha – Personal Website</h3>
+      <p>
+        A responsive one-page website designed to showcase social media links
+        and contact information, optimized for mobile devices.
+      </p>
+
+      <p class="tech">
+        <strong>Tech:</strong> HTML, CSS, JavaScript
+      </p>
+
+      <a
+        href="https://putinpasha.netlify.app"
+        target="_blank"
+        rel="noopener"
+        class="btn"
+      >
+        View Live
+      </a>
+    </div>
+  </div>
 </section>
-
-<!-- CONTACT -->
-<section id="contact">
-    <h1>Contact Us</h1>
-    <p class="lead">Have a question or want to work together? Send a message below.</p>
-
-    <form id="contactForm" class="contact-form"
-          action="https://formspree.io/f/movyvkel" method="post">
-
-        <div class="form-grid">
-
-            <div class="form-row">
-                <label for="name">Name*</label>
+    
+    <section id="contact" class="content-section contact-form-container">
+        <h2>Get in Touch</h2>
+        <form id="contact-form" action="https://formspree.io/f/movyvkel" method="POST">
+            <div class="form-group">
+                <label for="name">Name</label>
                 <input type="text" id="name" name="name" required>
             </div>
-
-            <div class="form-row">
-                <label for="email">Email*</label>
+            <div class="form-group">
+                <label for="email">Email</label>
                 <input type="email" id="email" name="email" required>
             </div>
-
-            <div class="form-row">
-                <label for="subject">Subject</label>
-                <input type="text" id="subject" name="subject">
-            </div>
-
-            <div class="form-row full">
-                <label for="message">Message*</label>
+            <div class="form-group">
+                <label for="message">Message</label>
                 <textarea id="message" name="message" rows="5" required></textarea>
             </div>
-
-            <div class="form-actions">
-                <button type="submit" class="btn btn-primary">Send Message</button>
-                <button type="reset" class="btn btn-secondary">Reset</button>
-            </div>
-
-        </div>
-
-    </form>
-</section>
+            <button type="submit">Send Message</button>
+            <p id="form-status" style="display: none; margin-top: 10px;"></p>
+        </form>
+    </section>
 
 <footer class="footer">
     <div class="footer-content">
@@ -130,7 +120,10 @@
         <p class="footer-copy">&copy; 2025 Jotham Web. All rights reserved.</p>
     </div>
 </footer>
-
+    
+    <script src="script.js"></script>
+</body>
+</html>
 
 <script>
    
