@@ -289,10 +289,11 @@ footer {
   color: #000;
   font-weight: 600;
   text-decoration: none;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 .btn:hover {
   background: #79b8ff;
 }
+
 
