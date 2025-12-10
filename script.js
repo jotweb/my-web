@@ -1,9 +1,9 @@
 // 1. Hero Section Alternating Backgrounds
 const hero = document.getElementById('hero');
 const backgroundImages = [
-    'url(image.png)', // Replace with your image paths
-    'url(image1.png)',
-    'url(image2.png)'
+    'url(image4.jpg.jpg)', // Replace with your image paths
+    'url(image3.jpg.jpg)',
+    'url(image2.jpg.jpg)'
 ];
 let currentImageIndex = 0;
 
@@ -91,4 +91,5 @@ async function handleSubmit(event) {
 }
 
 form.addEventListener("submit", handleSubmit);
+
 
