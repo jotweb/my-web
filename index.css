@@ -1,85 +1,317 @@
-       body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            animation: fadeIn 1s;
-        }
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        header {
-            background-color: #4CAF50;
-            background-image
-            color: white;
-            width: 100%;
-            padding: 20px 0;
-            text-align: center;
-            position: relative;
-        }
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+}
 
-        h1 {
-            margin: 0;
-            font-size: 2.5em;
-            animation: slideIn 1s ease-in-out;
-        }
+/* --- Header & Navigation --- */
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
 
-        @keyframes slideIn {
-            from { transform: translateY(-20px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-        nav {
-            margin: 20px 0;
-        }
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4CAF50; /* Highlight for the logo */
+}
 
-        nav a {
-            margin: 0 15px;
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        section {
-            width: 90%;
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            animation: scaleUp 0.5s ease-in-out;
-        }
+.menu-toggle {
+    display: none; 
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+}
 
-        @keyframes scaleUp {
-            from { transform: scale(0.9); }
-            to { transform: scale(1); }
-        }footer {
-            margin-top: auto;
-            padding: 10px 0;
-            background-color: #4CAF50;
-            color: white;
-            width: 100%;
-            text-align: center;
-        }
+nav ul {
+    list-style: none;
+    display: flex;
+}
 
-        .button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
+    transition: background-color 0.3s;
+}
 
-        .button:hover {
-            background-color: #45a049;
-        }
-      #skills ul li{
-list-style:none;}
+nav ul li a:hover {
+    background-color: #555;
+}
+
+/* --- Hero Section (RESPONSIVE & Alternating Backgrounds) --- */
+.hero {
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease-in-out; /* Smooth background transition */
+    padding: 0 5%;
+    position: relative; /* For the overlay */
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay for text readability */
+    z-index: 1;
+}
+
+.hero-content {
+    z-index: 2;
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+/* --- General Content Sections --- */
+.content-section {
+    padding: 4rem 5%;
+    min-height: 300px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* --- Contact Form (RESPONSIVE) --- */
+.contact-form-container {
+    background: #fff;
+}
+
+#contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    /* Ensures input/textarea expands to 100% width on small screens */
+}
+
+#contact-form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+    width: 100%; /* Full width button on small screens */
+}
+
+#contact-form button:hover {
+    background-color: #45a049;
+}
+
+
+/* --- Footer --- */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 5%;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #4CAF50;
+}
+
+/* --- Media Queries for Mobile Responsiveness --- */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        width: 100%;
+        border-top: 1px solid #555;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .content-section {
+        padding: 2rem 5%;
+    }
+
+   @media (max-width: 768px) {
+    /* Show the hamburger menu icon */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Hide the default navigation on mobile */
+    #main-nav {
+        /* Full width and positioning */
+        position: absolute;
+        top: 100%; /* Place it right below the header */
+        left: 0;
+        width: 100%;
+        
+        /* Hiding mechanism */
+        max-height: 0; /* Starts hidden */
+        overflow: hidden; /* Clips the content */
+        transition: max-height 0.3s ease-in-out; /* Smooth transition */
+        background: #333; /* Dark background for the mobile menu */
+    }
+
+    /* When the 'nav-open' class is added by JS, reveal the menu */
+    #main-nav.nav-open {
+        /* Set a large enough height to reveal all content, 
+           or use the actual height if known */
+        max-height: 300px; 
+    }
+    
+    /* Make menu items stack vertically */
+    #main-nav ul {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+    
+    #main-nav ul li {
+        text-align: center;
+        width: 100%;
+    }
+    
+    #main-nav ul li a {
+        padding: 15px; /* More tap-friendly padding */
+        border-bottom: 1px solid #555;
+    }
+
+    /* Remove the bottom border from the last item */
+    #main-nav ul li:last-child a {
+        border-bottom: none;
+    }
+}
+
+#projects {
+  padding: 2rem 1rem;
+}
+
+.project-card {
+  background: #111;
+  border-radius: 14px;
+  overflow: hidden;
+  max-width: 420px;
+  margin: auto;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.project-content {
+  padding: 1.2rem;
+}
+
+.project-content h3 {
+  margin: 0 0 0.5rem;
+}
+
+.project-content p {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.tech {
+  margin: 0.8rem 0;
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+/* Button at bottom */
+.btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 0.7rem;
+  border-radius: 10px;
+  background: #4da3ff;
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+
+.btn:hover {
+  background: #79b8ff;
+}
