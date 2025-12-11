@@ -46,7 +46,7 @@ nav ul {
     display: flex;
 }
 
-nav ul li a {
+nav ul a {
     color: #fff;
     text-decoration: none;
     padding: 0.5rem 1rem;
@@ -54,7 +54,7 @@ nav ul li a {
     transition: background-color 0.3s;
 }
 
-nav ul li a:hover {
+nav ul a:hover {
     background-color: #555;
 }
 
@@ -193,7 +193,7 @@ footer {
         margin-top: 10px;
     }
 
-    nav ul li {
+    nav ul a {
         width: 100%;
         border-top: 1px solid #555;
     }
@@ -244,18 +244,18 @@ footer {
         padding: 10px 0;
     }
     
-    #main-nav ul li {
+    #main-nav ul {
         text-align: center;
         width: 100%;
     }
     
-    #main-nav ul li a {
+    #main-nav ul a {
         padding: 15px; /* More tap-friendly padding */
         border-bottom: 1px solid #555;
     }
 
     /* Remove the bottom border from the last item */
-    #main-nav ul li:last-child a {
+    #main-nav ul:last-child a {
         border-bottom: none;
     }
 }
@@ -315,3 +315,4 @@ footer {
 .btn:hover {
   background: #79b8ff;
 }
+
