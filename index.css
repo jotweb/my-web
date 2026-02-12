@@ -186,6 +186,10 @@ footer {
         flex-direction: column;
         text-align: center;
     }
+     section{
+        margin-bottom:8px;
+    }
+
 
     nav ul {
         flex-direction: column;
@@ -315,9 +319,7 @@ footer {
 .btn:hover {
   background: #79b8ff;
 }
-    section{
-        margin-bottom:8px;
-    }
+   
 
 
 
