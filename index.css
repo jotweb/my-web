@@ -315,6 +315,10 @@ footer {
 .btn:hover {
   background: #79b8ff;
 }
+    section{
+        margin-bottom:8px;
+    }
+
 
 
 
